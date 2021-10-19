@@ -8,18 +8,20 @@ module.exports = app=>{
     const produit = require("../controllers/produits.controller.js");
     
 
-    // const multer = require ("multer");
-    // const storage = multer.diskStorage(
-    //     destination = (req,file,callback)=>{
-    //         callback(null,'../uploads/')
-    //     },
-    //     filename=(req,file,callback)=>{
-    //         callback(null,`nom${file.originalname}`)
-    //     }
-    // );
-    // const upload = multer({
-    //     storage : storage
-    // });
+    /*
+        const multer = require ("multer");
+        const storage = multer.diskStorage(
+            destination = (req,file,callback)=>{
+                callback(null,'../uploads/')
+            },
+            filename=(req,file,callback)=>{
+                callback(null,`nom${file.originalname}`)
+            }
+        );
+        const upload = multer({
+            storage : storage
+        });
+    */
 
 
     const multipart = require('connect-multiparty');
