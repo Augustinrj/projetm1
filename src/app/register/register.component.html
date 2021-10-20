@@ -1,0 +1,37 @@
+<app-toolbar></app-toolbar>
+<div class="loginback">
+    <!-- <center> -->
+    <div class="row col-lg-12">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4" style="padding: 5px;width: 400px;height: 550px;background-color: white;">
+            
+                <div >
+                    <div class="textlogo" style="text-align:center;">Inscription au Compte</div>
+                    <form  class="formlogin" [formGroup]="registerForm">
+                        <!-- [formGroup]="registerForm" -->
+                        <div class="leftalign marge success" *ngIf="emailReg"> Enregistrement des informations reussite</div>
+                        <label class="leftalign marge" style="text-align:left;">Type du compte</label><br>
+                        <select formControlName="typeCompte" class="form-control marge">
+                            <option [ngValue]="1">Administrateur</option>
+                            <option [ngValue]="2">Vendeur</option>
+                            <option [ngValue]="3">Client</option>
+                        </select>
+                        <label class="leftalign marge" style="text-align:left;">Nom complet</label><br>
+                        <input type="text" class="form-control marge" placeholder="RAKOTO Jean" formControlName="nom"/>
+                        <label class="leftalign marge" style="text-align:left;">Votre adresse email </label><br>
+                        <input type="email" class="form-control marge" placeholder="rakoto@gmail.com" formControlName="email"/>
+                        <label class="leftalign marge" style="text-align:left;">Mot de passe </label><br>
+                        <input type="password" class="form-control marge" placeholder="Mot de passe" formControlName="password"/>
+                        <button type="submit" class="form-control marge" (click)="save();" id="btninscription">Enregister informations</button>
+                    </form>
+                    <button class="form-control marge" id="btnconexion"  [routerLink]="['/login']" >Connexion</button>
+                    <a href="" class="marge" style="text-align:center;">Avez-vous oublié votre mot de passe ? </a>
+                    <br>
+                    <br>
+                    <hr>
+                </div>
+            </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <!-- </center> -->
+</div>

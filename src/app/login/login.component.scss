@@ -1,0 +1,33 @@
+.loginback{
+    background-image: url("../../assets/image/login.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    padding: 10px;
+    padding-top: 30px;
+}
+.formlogin{
+    padding: auto;
+}
+.leftalign{
+    text-align: left;
+}
+
+.marge{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 90%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#btnconexion{
+    background-color:#3D10D6;
+    font-family: 'Script MT';
+    color: white;
+}
+#btninscription{
+    background-color:#0FA5CC;
+    font-family: 'Script MT';
+    color: white;
+}

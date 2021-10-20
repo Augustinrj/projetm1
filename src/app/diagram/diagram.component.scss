@@ -1,0 +1,12 @@
+ //////////////////
+  #myDiagramDiv{
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 100%;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    border : 1px solid black;
+    background-color: gray;
+  }

@@ -1,0 +1,20 @@
+<div class="card-left">
+    <div class="spacer"></div>
+    <input type="text" (change)="finder($event)" class="form-group input" placeholder="recherche"/>
+    <button class="btn btn-info">Rechercher</button>
+</div>
+<div class="row card-left">
+
+<div  class="col-lg-2 card" *ngFor="let produit of produits" > 
+    <div class="card"><img class="text-center" height="100px" width="180px" src="http://localhost:3000/api/images/{{produit.photoUrl}}" alt="image"/></div>
+    <div>
+        <div class="text-center"> 
+        {{produit.nomprod}}<br>
+        {{produit.description}}<br>
+        {{produit.stock}} restant(s) en stock(s)
+        </div>
+        <button class="form-control btn btn-info bleu"style="color:white;">{{produit.prix}} Ar Panier</button>
+        <button class="form-control btn btn-info jaune">Commentaires</button>
+    </div>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<app-toolbar-vendeur></app-toolbar-vendeur>
+<div class="row">
+    <div class="col-md-3">
+        <ul class="nostyle">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <!-- LISTE PRODUITS-->
+        <div class="row">
+            <div class="col-md-6">
+               <label class="marge">Listes des categories</label>
+               <table class="table table-striped table-responsive">
+                    <thead class="text-center">
+                        <td>Categories</td>
+                        <td>Option</td>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let categorie of categories">
+                            <td>{{categorie.libelle}}</td>
+                            <td><button class="btn" (click)="toogleActive(categorie.id,categorie.actif);" [ngClass]="{'btn-success': categorie.actif==0,'btn-danger':categorie.actif==1}">{{categorie.actif==0?"Activer":"Desactiver"}}</button>
+                            </td>
+                        </tr>  
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <form [formGroup]="addcategorie">
+                    <label class="marge text-center">Ajout categorie</label><br>
+                    <label class="marge">Libelle categorie</label>
+                    <input type="text" class="form-control marge" formControlName="libelle"/>
+                    <input type="submit" class=" marge btn btn-success" (click)="saveCategorie();" value="Enregistrer"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

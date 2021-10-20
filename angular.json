@@ -31,9 +31,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.js","./node_modules/jquery/dist/jquery.js"]
           },
           "configurations": {
             "production": {
@@ -68,7 +69,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Angular:build"
+            "browserTarget": "Angular:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {

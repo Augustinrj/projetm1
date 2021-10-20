@@ -1,0 +1,24 @@
+<app-toolbar></app-toolbar>
+<div class="loginback">
+    <!-- <center> -->
+    <div class="row col-lg-12">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4" style="padding: 5px;width: 400px;height: 550px;background-color: white;">
+            
+                <div >
+                    <div class="logo" style="text-align:center;"><img src="../../assets/image/logo.png" alt="logo"/></div>
+                    <form [formGroup]="loginForm" class="formlogin">
+                        <label class="leftalign marge" style="text-align:left;">Votre identifiant ou adresse email </label><br>
+                        <input type="text" class="form-control marge" placeholder="identifiant ou email" formControlName="email"/>
+                        <label class="leftalign marge" style="text-align:left;">Mot de passe </label><br>
+                        <input type="password" class="form-control marge" placeholder="Mot de passe" formControlName="password"/>
+                        <button type="submit" (click)="submit();" class="form-control marge" id="btnconexion">Connexion</button>
+                    </form>
+                    <button class="form-control marge" id="btninscription" [routerLink]="['/register']">Inscription au compte</button><br>
+                    <a [routerLink]="['/diagram']" class="marge" style="text-align:center;">Avez-vous oublié votre mot de passe ? </a>
+                </div>
+            </div>
+        <div class="col-lg-4"></div>
+    </div>
+    <!-- </center> -->
+</div>
